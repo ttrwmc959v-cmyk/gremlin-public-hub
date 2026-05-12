@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Gremlin — Ku Ku // Broken People Transmission">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Gremlin — Broken People Transmission">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#05060a"/>
@@ -50,10 +50,11 @@
   <!-- Type -->
   <g font-family="'Helvetica Neue', Arial, sans-serif">
     <text x="80" y="160" font-size="26" letter-spacing="8" fill="#67ff9a">// LIVE TRANSMISSION</text>
-    <text x="80" y="320" font-size="180" font-weight="800" letter-spacing="-4" fill="url(#lg)">KU KU</text>
-    <text x="80" y="380" font-size="28" letter-spacing="6" fill="#b07bff">cool · one of one · from the mothership</text>
-    <text x="80" y="500" font-size="34" font-weight="700" letter-spacing="2" fill="#e8ffea">GREMLIN</text>
-    <text x="80" y="540" font-size="22" letter-spacing="4" fill="#8a93a8">Broken People Family · gremlinraps.com</text>
+    <text x="80" y="305" font-size="118" font-weight="800" letter-spacing="-5" fill="url(#lg)">BROKEN</text>
+    <text x="80" y="410" font-size="118" font-weight="800" letter-spacing="-5" fill="url(#lg)">PEOPLE</text>
+    <text x="80" y="465" font-size="28" letter-spacing="5" fill="#b07bff">fall apart · assemble stronger</text>
+    <text x="80" y="530" font-size="34" font-weight="700" letter-spacing="2" fill="#e8ffea">GREMLIN</text>
+    <text x="80" y="570" font-size="22" letter-spacing="4" fill="#8a93a8">Official merch drop alerts · gremlinraps.com</text>
   </g>
 
   <!-- Bottom row dots -->

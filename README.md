@@ -1,4 +1,4 @@
-# Gremlin — Ku Ku Public Hub
+# Gremlin — Broken People Public Hub
 
 One-page promotional link hub for **Gremlin** (rapper / Broken People Family). Built static-only, mobile-first, with strong push-button reliability for Facebook / Instagram in-app browsers.
 
@@ -15,7 +15,7 @@ One-page promotional link hub for **Gremlin** (rapper / Broken People Family). B
 
 ## Design Decisions
 
-- **Aesthetic:** futuristic rapper / space hip-hop. Deep black background, neon green + alien purple gradients, dotted orbit rings, drifting starfield, RGB glitch on the hero word **KU KU**.
+- **Aesthetic:** futuristic rapper / space hip-hop. Deep black background, neon green + alien purple gradients, dotted orbit rings, drifting starfield, RGB glitch on the hero phrase **BROKEN PEOPLE** with a subtle break-apart/reassemble motion.
 - **Type:** Clash Display (display, Fontshare), Space Grotesk (body, Fontshare), Major Mono Display (mono accents, Google Fonts), JetBrains Mono fallback. All loaded via CDN with `preconnect`.
 - **Logo:** Original SVG — hex frame with gradient stroke, almond-eyed alien gremlin head, glitch slash through the frame, antenna spark. Used inline in the page and as the favicon (simplified). Not copied from any external clothing logo.
 - **Buttons:** Two primary CTAs (Merch / Spotify) with corner-cut accents, gradient surface, UFO scan-line sweep on hover/press. Secondary grid of 7 channel links with alien "tractor beam" glow that pulls upward on press.
@@ -32,7 +32,7 @@ Every visible button/link is:
 
 ## Links included
 
-- Merch / Broken People Clothing — https://gremlinraps.com/
+- Merch / Broken People Clothing drop alerts — https://gremlinraps.com/
 - YouTube — https://www.youtube.com/channel/UC8V8PF8q1Ko4TqmODuvV6Fg
 - Instagram — https://www.instagram.com/gremlinraps/
 - Facebook — https://www.facebook.com/gremlinraps

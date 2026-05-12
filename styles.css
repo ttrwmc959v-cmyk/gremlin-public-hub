@@ -1,5 +1,5 @@
 /* ============================================================
-   GREMLIN — Ku Ku Hub
+   GREMLIN — Broken People Hub
    Palette: deep space black + neon green + alien purple + magenta glitch + faith gold
    ============================================================ */
 
@@ -253,6 +253,24 @@ a, button { -webkit-tap-highlight-color: transparent; touch-action: manipulation
   color: transparent;
   text-shadow: 0 0 30px rgba(103, 255, 154, 0.15);
 }
+.hero__glitch > span {
+  position: relative;
+  display: inline-block;
+}
+.hero__glitch--broken {
+  white-space: nowrap;
+  font-size: clamp(40px, 11vw, 84px);
+  letter-spacing: -0.055em;
+  line-height: 0.9;
+}
+.hero__glitch--broken > span:not(.hero__space) {
+  animation: broken-letter 6.8s cubic-bezier(.2,.8,.2,1) infinite;
+  animation-delay: calc(var(--i) * 42ms);
+  will-change: transform, opacity, filter;
+}
+.hero__space {
+  width: 0.2em;
+}
 .hero__glitch::before,
 .hero__glitch::after {
   content: attr(data-text);
@@ -262,6 +280,33 @@ a, button { -webkit-tap-highlight-color: transparent; touch-action: manipulation
   background-clip: text;
   color: transparent;
   pointer-events: none;
+}
+.hero__glitch--broken::before,
+.hero__glitch--broken::after {
+  opacity: 0.16;
+}
+@keyframes broken-letter {
+  0%, 10%, 44%, 100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+    opacity: 1;
+    filter: blur(0);
+  }
+  18% {
+    transform:
+      translate3d(
+        calc((var(--i) - 6) * 1.5px),
+        calc((6 - var(--i)) * 0.75px),
+        0
+      )
+      rotate(calc((var(--i) - 6) * 1.8deg));
+    opacity: 0.86;
+    filter: blur(0.2px);
+  }
+  28% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+    opacity: 1;
+    filter: blur(0);
+  }
 }
 .hero__glitch::before {
   background: linear-gradient(180deg, var(--magenta), var(--magenta));
