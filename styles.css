@@ -240,43 +240,32 @@ a, button { -webkit-tap-highlight-color: transparent; touch-action: manipulation
   margin: 18px 0 14px;
   font-family: var(--font-display);
   font-weight: 700;
-  line-height: 0.95;
+  line-height: 0.92;
   letter-spacing: -0.02em;
   font-size: clamp(64px, 18vw, 128px);
 }
-.hero__glitch {
+.hero__welcome,
+.hero__family {
   position: relative;
-  display: inline-block;
+  display: block;
   background: linear-gradient(180deg, #ffffff 0%, var(--green) 60%, var(--purple) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   text-shadow: 0 0 30px rgba(103, 255, 154, 0.15);
 }
-.hero__glitch > span {
-  position: relative;
-  display: inline-block;
+.hero__welcome {
+  font-size: clamp(44px, 13vw, 86px);
+  letter-spacing: -0.04em;
 }
-.hero__glitch--broken {
-  white-space: nowrap;
-  font-size: clamp(40px, 11vw, 84px);
-  letter-spacing: -0.055em;
-  line-height: 0.9;
-  overflow: hidden;
-  padding-bottom: 0.12em;
-  vertical-align: top;
+.hero__family {
+  margin-top: 4px;
+  font-size: clamp(42px, 11vw, 78px);
+  letter-spacing: -0.045em;
 }
-.hero__glitch--broken > span:not(.hero__space) {
-  animation: broken-letter 7.4s cubic-bezier(.2,.8,.2,1) infinite;
-  animation-delay: calc(var(--i) * 34ms);
-  will-change: transform, opacity, filter;
-}
-.hero__space {
-  width: 0.2em;
-}
-.hero__glitch::before,
-.hero__glitch::after {
-  content: attr(data-text);
+.hero__family::before,
+.hero__family::after {
+  content: "Broken People Family!";
   position: absolute;
   inset: 0;
   -webkit-background-clip: text;
@@ -284,39 +273,18 @@ a, button { -webkit-tap-highlight-color: transparent; touch-action: manipulation
   color: transparent;
   pointer-events: none;
 }
-.hero__glitch--broken::before,
-.hero__glitch--broken::after {
-  opacity: 0.16;
-}
-@keyframes broken-letter {
-  0%, 18%, 72%, 100% {
-    transform: translate3d(0, 0, 0) rotate(0deg);
-    opacity: 1;
-    filter: blur(0);
-  }
-  32%, 48% {
-    transform: translate3d(0, 1.24em, 0) rotate(0deg);
-    opacity: 0;
-    filter: blur(1px);
-  }
-  60% {
-    transform: translate3d(0, -0.42em, 0) rotate(0deg);
-    opacity: 0.68;
-    filter: blur(0.35px);
-  }
-}
-.hero__glitch::before {
+.hero__family::before {
   background: linear-gradient(180deg, var(--magenta), var(--magenta));
   transform: translate(-2px, 0);
   mix-blend-mode: screen;
-  opacity: 0.55;
+  opacity: 0.22;
   animation: glitchA 4.2s steps(1, end) infinite;
 }
-.hero__glitch::after {
+.hero__family::after {
   background: linear-gradient(180deg, var(--green), var(--green));
   transform: translate(2px, 0);
   mix-blend-mode: screen;
-  opacity: 0.5;
+  opacity: 0.2;
   animation: glitchB 5.1s steps(1, end) infinite;
 }
 @keyframes glitchA {
