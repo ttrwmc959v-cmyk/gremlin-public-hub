@@ -1,6 +1,6 @@
 /* ============================================================
    GREMLIN — Ku Ku Hub
-   Palette: deep space black + neon green + alien purple + magenta glitch
+   Palette: deep space black + neon green + alien purple + magenta glitch + faith gold
    ============================================================ */
 
 :root {
@@ -13,6 +13,7 @@
   --purple: #b07bff;
   --purple-deep: #6d3df0;
   --magenta: #ff3df2;
+  --faith: #f8f1c8;
   --border: rgba(103, 255, 154, 0.18);
   --border-strong: rgba(176, 123, 255, 0.5);
 
@@ -90,6 +91,39 @@ a, button { -webkit-tap-highlight-color: transparent; touch-action: manipulation
   -webkit-mask-image: radial-gradient(ellipse at 50% 40%, black 30%, transparent 75%);
 }
 
+.bg__crosses {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.faith-cross {
+  position: absolute;
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  color: var(--faith);
+  font-family: Georgia, serif;
+  font-size: 24px;
+  line-height: 1;
+  text-shadow:
+    0 0 12px rgba(248, 241, 200, 0.45),
+    0 0 28px rgba(103, 255, 154, 0.25);
+  opacity: 0.22;
+  filter: drop-shadow(0 0 10px rgba(176, 123, 255, 0.22));
+  animation: cross-float 10s ease-in-out infinite;
+}
+.faith-cross::before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 1px solid rgba(103,255,154,0.12);
+  border-radius: 50%;
+  transform: rotate(18deg) scaleX(1.7);
+}
+.faith-cross--one { top: 13%; left: 8%; animation-delay: -1s; }
+.faith-cross--two { bottom: 14%; right: 10%; color: var(--green); animation-delay: -4s; }
+
 .bg__glow {
   position: absolute;
   width: 60vmax;
@@ -119,6 +153,11 @@ a, button { -webkit-tap-highlight-color: transparent; touch-action: manipulation
 @keyframes spin {
   from { transform: translate(-50%, -50%) rotate(0deg); }
   to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+@keyframes cross-float {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(-8deg); opacity: 0.14; }
+  35% { transform: translate3d(8px, -12px, 0) rotate(7deg); opacity: 0.28; }
+  70% { transform: translate3d(-6px, 8px, 0) rotate(14deg); opacity: 0.2; }
 }
 
 /* ============================================================
@@ -164,8 +203,8 @@ a, button { -webkit-tap-highlight-color: transparent; touch-action: manipulation
 }
 .hero__sub {
   font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.22em;
+  font-size: 9px;
+  letter-spacing: 0.14em;
   color: var(--green);
   margin-top: 3px;
   text-transform: uppercase;
@@ -184,7 +223,7 @@ a, button { -webkit-tap-highlight-color: transparent; touch-action: manipulation
   padding: 6px 10px;
   border: 1px solid var(--border);
   border-radius: 4px;
-  background: rgba(103, 255, 154, 0.06);
+  background: linear-gradient(90deg, rgba(103, 255, 154, 0.07), rgba(248, 241, 200, 0.035));
 }
 .hero__pulse {
   width: 8px; height: 8px; border-radius: 50%;
@@ -256,7 +295,7 @@ a, button { -webkit-tap-highlight-color: transparent; touch-action: manipulation
   font-family: var(--font-mono);
   font-size: clamp(11px, 3vw, 13px);
   letter-spacing: 0.28em;
-  color: var(--purple);
+  color: var(--faith);
   margin-top: 14px;
   text-transform: lowercase;
 }
@@ -288,7 +327,7 @@ a, button { -webkit-tap-highlight-color: transparent; touch-action: manipulation
   border-radius: var(--radius-lg);
   text-decoration: none;
   color: var(--ink);
-  background: linear-gradient(135deg, rgba(103,255,154,0.08), rgba(176,123,255,0.06));
+  background: linear-gradient(135deg, rgba(103,255,154,0.09), rgba(248,241,200,0.05), rgba(176,123,255,0.06));
   border: 1px solid var(--border);
   overflow: hidden;
   isolation: isolate;
@@ -333,6 +372,7 @@ a, button { -webkit-tap-highlight-color: transparent; touch-action: manipulation
   border-radius: 12px;
   background: rgba(5, 6, 10, 0.7);
   border: 1px solid var(--border);
+  box-shadow: inset 0 0 18px rgba(248,241,200,0.04);
   flex-shrink: 0;
 }
 .cta__icon svg { width: 22px; height: 22px; }
@@ -362,7 +402,7 @@ a, button { -webkit-tap-highlight-color: transparent; touch-action: manipulation
 .cta__scan {
   position: absolute;
   inset: 0;
-  background: linear-gradient(110deg, transparent 38%, rgba(103,255,154,0.18) 50%, transparent 62%);
+  background: linear-gradient(110deg, transparent 38%, rgba(103,255,154,0.18) 50%, rgba(248,241,200,0.08) 56%, transparent 62%);
   transform: translateX(-100%);
   pointer-events: none;
   z-index: -1;
@@ -479,6 +519,23 @@ a, button { -webkit-tap-highlight-color: transparent; touch-action: manipulation
   position: relative;
   overflow: hidden;
 }
+.drop__halo {
+  position: absolute;
+  right: 18px;
+  top: 14px;
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  color: var(--faith);
+  font-family: Georgia, serif;
+  font-size: 34px;
+  opacity: 0.1;
+  text-shadow: 0 0 18px rgba(248,241,200,0.6);
+  border: 1px solid rgba(248,241,200,0.16);
+  border-radius: 50%;
+  transform: rotate(-8deg);
+}
 .drop::before {
   content: "";
   position: absolute;
@@ -522,6 +579,11 @@ a, button { -webkit-tap-highlight-color: transparent; touch-action: manipulation
   box-shadow: 0 0 8px var(--green);
   border-radius: 50%;
   flex-shrink: 0;
+}
+.drop__list li:first-child,
+.drop__list li:nth-child(5),
+.drop__list li:nth-child(6) {
+  color: var(--faith);
 }
 .drop__list li:nth-child(2n) .drop__dot { background: var(--purple); box-shadow: 0 0 8px var(--purple); }
 
@@ -597,9 +659,28 @@ a, button { -webkit-tap-highlight-color: transparent; touch-action: manipulation
 .ufo-ripple--purple {
   background: radial-gradient(circle, rgba(176,123,255,0.9) 0%, rgba(176,123,255,0) 70%);
 }
+.ufo-cross {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  color: var(--faith);
+  font-family: Georgia, serif;
+  font-size: 28px;
+  line-height: 1;
+  text-shadow: 0 0 14px rgba(248,241,200,0.7), 0 0 24px rgba(103,255,154,0.28);
+  transform: translate(-50%, -50%) scale(0.72) rotate(-10deg);
+  animation: ufo-cross 760ms ease-out forwards;
+}
 @keyframes ufo-ripple {
   0%   { transform: translate(-50%, -50%) scale(0.6); opacity: 1; }
   100% { transform: translate(-50%, -50%) scale(24); opacity: 0; }
+}
+@keyframes ufo-cross {
+  0% { transform: translate(-50%, -50%) scale(0.72) rotate(-10deg); opacity: 0; }
+  20% { opacity: 1; }
+  100% { transform: translate(-50%, -92%) scale(1.18) rotate(12deg); opacity: 0; }
 }
 
 /* ============================================================
