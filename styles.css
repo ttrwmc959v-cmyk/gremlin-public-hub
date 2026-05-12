@@ -262,10 +262,13 @@ a, button { -webkit-tap-highlight-color: transparent; touch-action: manipulation
   font-size: clamp(40px, 11vw, 84px);
   letter-spacing: -0.055em;
   line-height: 0.9;
+  overflow: hidden;
+  padding-bottom: 0.12em;
+  vertical-align: top;
 }
 .hero__glitch--broken > span:not(.hero__space) {
-  animation: broken-letter 6.8s cubic-bezier(.2,.8,.2,1) infinite;
-  animation-delay: calc(var(--i) * 42ms);
+  animation: broken-letter 7.4s cubic-bezier(.2,.8,.2,1) infinite;
+  animation-delay: calc(var(--i) * 34ms);
   will-change: transform, opacity, filter;
 }
 .hero__space {
@@ -286,26 +289,20 @@ a, button { -webkit-tap-highlight-color: transparent; touch-action: manipulation
   opacity: 0.16;
 }
 @keyframes broken-letter {
-  0%, 10%, 44%, 100% {
+  0%, 18%, 72%, 100% {
     transform: translate3d(0, 0, 0) rotate(0deg);
     opacity: 1;
     filter: blur(0);
   }
-  18% {
-    transform:
-      translate3d(
-        calc((var(--i) - 6) * 1.5px),
-        calc((6 - var(--i)) * 0.75px),
-        0
-      )
-      rotate(calc((var(--i) - 6) * 1.8deg));
-    opacity: 0.86;
-    filter: blur(0.2px);
+  32%, 48% {
+    transform: translate3d(0, 1.24em, 0) rotate(0deg);
+    opacity: 0;
+    filter: blur(1px);
   }
-  28% {
-    transform: translate3d(0, 0, 0) rotate(0deg);
-    opacity: 1;
-    filter: blur(0);
+  60% {
+    transform: translate3d(0, -0.42em, 0) rotate(0deg);
+    opacity: 0.68;
+    filter: blur(0.35px);
   }
 }
 .hero__glitch::before {
