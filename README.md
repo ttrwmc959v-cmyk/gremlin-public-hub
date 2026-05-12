@@ -38,7 +38,8 @@ Every visible button/link is:
 - Facebook — https://www.facebook.com/gremlinraps
 - Spotify (artist) — https://open.spotify.com/artist/79RyMeAMdX3QgPGqYG0dCA
 - X / Twitter — https://x.com/gremlinraps
-- Mailing list (Mailchimp eepurl) — http://eepurl.com/cbyKKv
+- Contact / DM — https://www.instagram.com/gremlinraps/
+- Updates / mailing list (Mailchimp eepurl) — http://eepurl.com/cbyKKv
 
 TikTok intentionally omitted — no verified handle found.
 
